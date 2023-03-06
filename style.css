@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+.container {
+    display: flex;
+}
+
+.d-none {
+    display: none;
+}
+
+.left-div {
+    flex-basis: 20%;
+
+    padding: 20px 20px;
+    height: 100vh;
+    display: block;
+    height: 115vh;
+    background: #f2b6aa;
+    color: white;
+    font-size: 15px;
+}
+
+.product-image>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    
+}
+
+.add-form {
+    font-size: 15px;
+}
+
+.add-form h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.add-form>div>input,
+.add-form>div>label {
+    margin-bottom: 10px;
+}
+
+.add-form>div>input {
+    width: 100%;
+    padding: 8px 8px;
+
+    border-radius: 10px;
+    border: 1px solid lightcyan;
+    background: whitesmoke;
+    color: gray;
+    outline: none;
+}
+
+
+.left-btn-div {
+    padding-top: 10px;
+    max-width: 97%;
+    flex-wrap: nowrap;
+
+}
+
+.left-btn-div>div:first-child {
+    float: left;
+}
+
+.left-btn-div>div:last-child {
+    float: right;
+
+}
+.row{
+    display: flex;
+}
+.row>button {
+    background: none;
+    color: white;
+    border: 1px solid lightcyan;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 7px 32px;
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+}
+
+.btn-dark{
+    background-color: #333;
+    color: white;
+}
+
+.row>button:hover {
+    background-color: #e49584;
+}
+
+#btn-add {
+    flex-shrink: 1;
+}
+
+#btn-clear {
+    flex-shrink: 1;
+}
+
+#btn-update {
+    flex-shrink: 1;
+}
+
+.main-content {
+    max-width: 100%;
+    flex-basis: 80%;
+    background-color: #f4c9d7;
+    height: 115vh;
+}
+
+.tab-bar {
+    background-color: #f5efdd;
+    padding: 10px;
+    padding-left: 90px;
+    color: #82b9e6;
+    font-size: 20px;
+}
+
+.product-manager {
+    margin: 20px 30px;
+    background-color: #f5efdd;
+    height: 100vh;
+}
+
+.btn-div {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.search-container {
+    float: left;
+    margin-top: 10px;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.search-container input[type=text] {
+    padding: 4px 8px;
+    margin-top: 8px;
+    font-size: 15px;
+    border: 1px solid #F2B8B9;
+    border-right: none;
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.search-container button {
+    float: right;
+    padding: 4px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #f2b6aa;
+    font-size: 15px;
+    border: 1px solid #f2b6aa;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #d19a8d;
+    border: 1px solid #d19a8d;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.right-btn {
+    padding: 40px;
+    float: right;
+    width: 20%;
+}
+
+.right-btn>button:first-of-type {
+    background-color: rgb(235, 150, 178);
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 7px 13px;
+    border-radius: 5px;
+}
+.right-btn>button:first-of-type:hover {
+    background-color: rgb(197, 117, 144);
+}
+
+.product-image-right img{
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.product-image-right:hover img{
+    transform: scale(1.4);
+}
+
+
+.btn{
+    padding: 7px 10px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    margin-right: 5px; 
+}
+
+.btn-dark{
+    background-color: palevioletred;
+    color: black;
+}
+
+.sort{
+    cursor: pointer;
+}
+
+.sort-active{
+    color: #B689B2;
+}
+
+.check-box {
+    accent-color: palevioletred;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.thead-dark {
+    padding: 7px 10px;
+    color: black;
+    text-align: left;
+
+}
+
+.table>tbody>tr>td{
+    padding: 7px 10px;
+    text-align: left;
+}
+
+.table>tbody>tr>td:first-child{
+    text-align: center;
+}
+
+.table-hover>tbody>tr:hover{
+    background-color: rgb(248, 233, 233);
+    cursor: pointer;
+}
+
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+
+.tbody-product > tr:hover{
+    background-color: rgb(248, 233, 233);
+}

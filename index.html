@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@100&family=Rubik:wght@300&display=swap" 
+        rel="stylesheet">
+    <title>Product Management</title>
+    <link rel="icon" href="Images/icon.jpg">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-div">
+            <div class="add-form">
+                <h3>ADD NEW PRODUCT</h3>
+                <div class="product-image">
+                    <img id="reviewImage" src="Images/noimage.png" alt="">
+                </div>
+                <div>
+                    <label for="name">Product Name</label>
+                    <input type="text" name="" id="name" placeholder="Enter product name here...">
+                    <input type="hidden" id="id" value="0">
+                </div>
+                <div>
+                    <label for="image">Image</label>
+                    <input type="url" name="" id="image" onchange="changeImage()" placeholder="Enter link here...">
+                </div>
+                <div>
+                    <label for="quantity">Quantity</label>
+                    <input type="number" name="" id="quantity" placeholder="Enter quantity here...">
+                </div>
+                <div>
+                    <label for="weight">Net Weight</label>
+                    <input type="number" name="" id="weight" placeholder="Enter net weight here...">
+                </div>
+                <div>
+                    <label for="price">Price</label>
+                    <input type="text" name="" id="price" placeholder="Enter price here...">
+                </div>
+                <div class="left-btn-div row ">
+                    <label></label>
+                    <button class="btn btn-success" onclick="add()">Add</button>
+                    <button class="btn btn-warning d-none" onclick="updateProduct()">Update</button>
+                    <button class="btn btn-dark" onclick="resetAddForm()">Clear</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="tab-bar">
+                <h2> PRODUCT MANAGEMENT</h2>
+            </div>
+            <div class="product-manager">
+                <div class=" btn-div">
+                    <div class="search-container">
+                        <input type="text" id="search" placeholder="Search" name="search" onchange="searchByName()">
+                        <button type="submit" onclick="searchByName()"><i
+                                class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="right-btn">
+                        <button onclick="remove()"><i class="fa-solid fa-trash"></i> Delete</button>
+                    </div>
+                </div>
+                <div class="table-div">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" id="selectAllProducts" onchange="selectAllProducts()" class="check-box">
+                                </th>
+                                <th class="thead-dark" width="130px">Image</th>
+                                <th class="thead-dark" width="330px"> Product Name 
+                                    <span id="sort_asc" class="sort" title="Ascending" onclick="sort('asc')">&#x25B2;</span>
+                                    <span id="sort_desc" class="sort" title="Descending" onclick="sort('desc')">&#x25BC;</span>
+                                </th>                              
+                                <th class="thead-dark">Quantity</th>
+                                <th class="thead-dark">Net Weight</th>
+                                <th class="thead-dark">Price</th>
+                                <th class="thead-dark"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody-product" id="tbProducts">
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="product.js"></script>
+</body>
+
+</html>
