@@ -13,9 +13,9 @@ var checked_list = [];
 
 var products = [];
 
-const products_tbl = 'products_tbl';
+const products_prd = 'products_prd';
 function init() {
-    if (localStorage.getItem(products_tbl) == null) {
+    if (localStorage.getItem(products_prd) == null) {
         products = [
             new Product(1, "https://www.tofucute.com/images/10NL115-53_kitkat_bakable_custard_pudding_large.jpg", "Kit Kat Baked Custard Pudding", 12, 11.6, 4),
             new Product(2, "https://www.tofucute.com/images/10NL115-57_kitkat_strawberry_mochi_large.jpg", "Kit Kat Strawberry Daifuku Mochi", 25, 9.9, 3),
@@ -23,10 +23,10 @@ function init() {
             new Product(4, "https://www.tofucute.com/images/10NL110-78_kitkat_banana_caramel_2022update_large.jpg", "Kit Kat Banana Caramel", 19, 9.9, 3),
             new Product(5, "https://www.tofucute.com/images/10NL115-76_kit_kat_saveblueocean_large.jpg", "Kit Kat Save the Blue Ocean", 22, 11.6, 5),
         ];
-        localStorage.setItem(products_tbl, JSON.stringify(products));
+        localStorage.setItem(products_prd, JSON.stringify(products));
     }
     else {
-        products = JSON.parse(localStorage.getItem(products_tbl));
+        products = JSON.parse(localStorage.getItem(products_prd));
     }
 }
 function renderTable() {
@@ -159,7 +159,7 @@ function add() {
     products.push(new Product(id, image, name, quantity, weight, price));
 
     renderTable();
-    localStorage.setItem(products_tbl, JSON.stringify(products))
+    localStorage.setItem(products_prd, JSON.stringify(products))
     resetAddForm();
 }
 
@@ -188,7 +188,7 @@ function remove() {
                 products = products.filter(function (product) {
                     return product.id != id;
                 })
-                localStorage.setItem(products_tbl, JSON.stringify(products));
+                localStorage.setItem(products_prd, JSON.stringify(products));
                 renderTable();
                 checked_list = [];
                 document.querySelector('#selectAllProducts').checked = false;
@@ -238,7 +238,7 @@ function updateProduct() {
     product.weight = document.querySelector('#weight').value;
     product.price = document.querySelector('#price').value;
     
-    localStorage.setItem(products_tbl, JSON.stringify(products));
+    localStorage.setItem(products_prd, JSON.stringify(products));
     renderTable(false);
     resetAddForm();
 }
